@@ -22,7 +22,7 @@ if __name__ == '__main__':
         a = []
         for line in file.readlines():
             a.append(int(line))
-        test = ShellSort()
+        test = ShellSort(img=True)
         test.sort(a)
         res = test.isSorted(a)
         print("shell sort")
