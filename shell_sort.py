@@ -17,7 +17,7 @@ class ShellSort(SortBaseClass):
             h = h//3
 
 if __name__ == '__main__':
-    test_size = 1000
+    test_size = 10
     with open(f"test_{test_size}.txt", "r", encoding="utf-8") as file:
         a = []
         for line in file.readlines():

@@ -17,19 +17,23 @@ class MergeSort(SortBaseClass):
             self.looptimes +=1
             if i>mid:
                 a[k] = self.aux[j]
-                self.image_show_after_merge(a, lo, hi, k, j)
+                if self.img:
+                    self.image_show_after_merge(a, lo, hi, k, j)
                 j += 1
             elif j>hi:
                 a[k] = self.aux[i]
-                self.image_show_after_merge(a, lo, hi, k, i)
+                if self.img:
+                    self.image_show_after_merge(a, lo, hi, k, i)
                 i += 1
             elif self.less(self.aux[j],self.aux[i]):
                 a[k] = self.aux[j]
-                self.image_show_after_merge(a, lo, hi, k, j)
+                if self.img:
+                    self.image_show_after_merge(a, lo, hi, k, j)
                 j += 1
             else:
                 a[k] = self.aux[i]
-                self.image_show_after_merge(a, lo, hi, k, i)
+                if self.img:
+                    self.image_show_after_merge(a, lo, hi, k, i)
                 i += 1
 
     def image_show_after_merge(self, a: list, lo: int, hi: int, k: int, i: int):
@@ -88,7 +92,7 @@ if __name__ == '__main__':
         a = []
         for line in file.readlines():
             a.append(int(line))
-        test = MergeSort()
+        test = MergeSort(img=True)
         test.sort(a)
         res = test.isSorted(a)
         print("merge sort")
