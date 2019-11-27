@@ -1,4 +1,4 @@
-from sort.sort_base_class import SortBaseClass
+from sort_base_class import SortBaseClass
 
 
 class ShellSort(SortBaseClass):

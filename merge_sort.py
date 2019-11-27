@@ -1,4 +1,4 @@
-from .sort_base_class import *
+from sort_base_class import *
 
 
 class MergeSort(SortBaseClass):
